@@ -1,0 +1,49 @@
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: #020617;
+      color: #fff;
+    }
+
+    .cardbg{
+        background: #22c55e
+    }
+
+    .character-card {
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.character-card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+.image-wrapper {
+  position: relative;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px;
+  background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+  color: #fff;
+}
+
+.overlay h6 {
+  margin: 0;
+  font-weight: bold;
+}
+
+.status {
+  font-size: 12px;
+  opacity: 0.8;
+}

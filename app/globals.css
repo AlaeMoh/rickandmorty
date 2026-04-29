@@ -47,3 +47,21 @@ a {
     color-scheme: dark;
   }
 }
+
+
+.title {
+  font-family: var(--font-mountains);
+  font-weight: 700;
+}
+
+.description {
+  font-family: var(--font-prata);
+}
+
+.navbarColor{
+  background-color: #213A57;
+}
+
+.footerbg{
+  background:#000000
+}

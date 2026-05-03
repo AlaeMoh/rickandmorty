@@ -8,7 +8,16 @@
         background: #22c55e
     }
 
-    .character-card {
+    .bg-card{
+     background-color:#0f172a ; 
+    }
+
+    .location-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 10px 30px rgba(34, 197, 94, 0.3);
+}
+
+   .character-card {
   border-radius: 16px;
   overflow: hidden;
   cursor: pointer;

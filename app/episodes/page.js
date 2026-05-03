@@ -24,7 +24,7 @@ export default function Episodes() {
   }, []); 
   return (
        <div className="container my-5">
-          <h1 className="text-center mb-4 title">Rick and Morty Episodes</h1>
+          <h1 className="text-center mb-4 title text-success">Rick and Morty Episodes</h1>
           
           {/* Carousel section */}
           <section>
@@ -36,22 +36,22 @@ export default function Episodes() {
      <div className="container py-5">
       <h1 className="title text-center mb-5">Multiverse Episode Logs</h1>
       
-      <div className="row gap-5">
+      <div className="row gap-5 ">
         {episodes.map((episode) => (
-      <div key={episode.id} episode={episode} className="card h-100 shadow-sm border-0 bg-light">
+      <div key={episode.id} episode={episode} className="card h-100 shadow-sm border-0 bg-card text-white episodecard">
         {/* Episode Season/Number Badge */}
 
-        <div className="card-header cardbg text-white d-flex justify-content-between align-items-center">
+        <div className="card-header cardbg text-white d-flex justify-content-between align-items-center ">
           <span className="fw-bold">{episode.episode}</span>
-          <small className="badge bg-info text-dark">ID: {episode.id}</small>
+          <small className="badge bg-warning text-dark">ID: {episode.id}</small>
         </div>
 
-        <div className="card-body">
+        <div className="card-body ">
           <h5 className="card-title title mb-3" style={{ fontSize: '1.4rem' }}>
             {episode.name}
           </h5>
           
-          <p className="card-text description text-muted mb-2">
+          <p className="card-text  description text-white mb-2">
             <strong>Release Date:</strong> {episode.air_date}
           </p>
           
@@ -62,8 +62,8 @@ export default function Episodes() {
           </div>
         </div>
 
-        <div className="card-footer bg-white border-top-0 pb-3">
-          <button className="btn cardbg w-100 rounded-pill"  onClick={()=>{router.push(`/episodes/${episode.id}`)}}>
+        <div className="card-footer border-top-0 pb-3">
+          <button className="btn bg-warning w-100 rounded-pill  title"  onClick={()=>{router.push(`/episodes/${episode.id}`)}}>
             View Details
           </button>
         </div>

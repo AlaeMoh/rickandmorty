@@ -93,4 +93,10 @@ try{
 
 }
 
+//////////////
+
+export const searchCharacter= async()=>{
+    
+}
+
 

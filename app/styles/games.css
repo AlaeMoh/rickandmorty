@@ -1,9 +1,15 @@
   body {
-      background-color: #0B6477;
+      background-color: #020617;
       color: #fff;
     }
 
-    .game-card {
+
+    .d-bg{
+  background: #0f172a;
+
+    }
+
+  .game-card {
   width: 20rem;
   border-radius: 16px;
   overflow: hidden;
@@ -82,3 +88,18 @@ button {
 .matched {
   box-shadow: 0 0 12px #22c55e;
 }
+
+    .game1{
+      background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../../public//assets/shop1.jpg') center/cover no-repeat;
+      height: 800px;
+    }
+
+       .game2{
+      background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../../public//assets/live.jpg') center/cover no-repeat;
+      height: 600px;
+    }
+
+    .game3{
+          background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../../public//assets/memoy.jpg') center/cover no-repeat;
+      height: 800px;
+    }

@@ -52,7 +52,7 @@ const [cards, setCards] = useState([]);
   };
 
   return (
-    <div className="container mt-5 text-center text-white">
+    <div className="container mt-5 text-center text-warning pb-5 ">
       <h1 className='title'>Memory Match</h1>
       <p className="mb-4 title">Moves: {moves} | Matches: {matchedIds.length} / 8</p>
       
@@ -88,7 +88,7 @@ const [cards, setCards] = useState([]);
 
       {matchedIds.length === 8 && (
         <div className="mt-4">
-          <h2 className="text-success">Wubba Lubba Dub Dub! You Won!</h2>
+          <h2 className="text-success title">Wubba Lubba Dub Dub! You Won!</h2>
           <button className="btn btn-warning mt-2" onClick={initGame}>Play Again</button>
         </div>
       )}

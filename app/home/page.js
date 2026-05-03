@@ -11,9 +11,6 @@ import Game3 from "../memorymatch/page"
 export default function Home() {
 
   const router= useRouter()
-  // const [characters, setCharacters]= useState([])
-  // const [episodes, setEpisodes]= useState([])
-  // const [location, setLocations]= useState([])
 
   return (
     <div>
@@ -29,35 +26,61 @@ export default function Home() {
 {/* <!-- Featured Characters --> */}
 <section className="container py-5">
   <h2 className="section-title title">In our space you can</h2>
+<div className="container my-5">
+  <div className="row justify-content-center g-4">
 
-  <div className="row g-4">
-
-    <div className="col-md-3">
+    <div className="col-12 col-md-4 col-lg-3">
       <div className="card p-3 text-center">
-      <button className='btn button-text' onClick={()=>{router.push("/episodes")}}>Watch Episodes</button>
+        <button 
+          className="btn button-text w-100"
+          onClick={() => router.push("/episodes")}
+        >
+          Watch Episodes
+        </button>
       </div>
     </div>
 
-    <div className="col-md-3">
+    <div className="col-12 col-md-4 col-lg-3">
       <div className="card p-3 text-center">
-      <button className='btn button-text' onClick={()=>{router.push("/locations")}}>Find locations</button>
-
+        <button 
+          className="btn button-text w-100"
+          onClick={() => router.push("/locations")}
+        >
+          Find Locations
+        </button>
       </div>
     </div>
-        <div className="col-md-3">
+
+    <div className="col-12 col-md-4 col-lg-3">
       <div className="card p-3 text-center">
-      <button className='btn button-text onClick={()=>{router.push("/characters")}}'>check characters</button>
+        <button 
+          className="btn button-text w-100"
+          onClick={() => router.push("/characters")}
+        >
+          Check Characters
+        </button>
       </div>
     </div>
 
-    <div className="col-md-3">
+    <div className="col-12 col-md-4 col-lg-3">
       <div className="card p-3 text-center">
-      <button className='btn button-text'>Shop</button>
+        <button className="btn button-text w-100"
+        onClick={() => router.push("/allgames")} >
+          Play Games
+        </button>
+      </div>
+    </div>
 
+    <div className="col-12 col-md-4 col-lg-3">
+      <div className="card p-3 text-center">
+        <button className="btn button-text w-100">
+          Shop Products
+        </button>
       </div>
     </div>
 
   </div>
+</div>
 </section>
 
 {/* <!-- Section 3 --> */}
@@ -66,42 +89,44 @@ export default function Home() {
 
   <div className="row g-4">
 
-    <div className="col-md-4">
-      <div className="card p-3 text-center">
+<div className="col-12 col-md-4">
+  <div className="card p-3 text-center d-flex justify-content-center align-items-center">
+    
+    <div className="ratio ratio-16x9 w-100">
       <iframe
-        width="380"
-        height="360"
         src="https://www.youtube.com/embed/EuLzlDQ8Ohs"
         title="Rick and Morty | Season 9 Episode Titles"
-        frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
-      ></iframe>    
-      </div>
+      ></iframe>
     </div>
 
+  </div>
+</div>
     <div className="col-md-4">
-      <div className="card p-3 text-center">
+      <div className="card p-3 text-center d-flex justify-content-center align-items-center">
+            <div className="ratio ratio-16x9 w-100">
+
         <iframe
-          width="380"
-          height="360"
         src="https://www.youtube.com/embed/wSgipC6JDsU"
         title="Rick and Morty | Season 9 Preview"          frameBorder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
         ></iframe>
+        </div>
       </div>
     </div>
         <div className="col-md-4">
-      <div className="card p-3 text-center">
+      <div className="card p-3 text-center d-flex justify-content-center align-items-center">
+           <div className="ratio ratio-16x9 w-100">
       <iframe
-        width="380"
-        height="360"
-src="https://www.youtube.com/embed/XO43hYFRSbs"
+
+        src="https://www.youtube.com/embed/XO43hYFRSbs"
         title="Rick and Morty | Season 9 Official Trailer"        frameBorder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         allowFullScreen
       ></iframe>  
+      </div>
           </div>
     </div>
 

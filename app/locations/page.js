@@ -37,7 +37,7 @@ export default  function  Locations() {
             <div className="card location-card p-4 text-center h-100"
              onClick={() => router.push(`/locations/${loc.id}`)}>
               
-              <h5 className="mb-3">{loc.name}</h5>
+              <h5 className="mb-3 title">{loc.name}</h5>
 
               <span className="badge butbg mb-2">
                 {loc.type}

@@ -5,6 +5,7 @@ import Navbar from './components/navbar'
 import { Prata, Mountains_of_Christmas } from 'next/font/google';
 import Footer from "./components/footer";
 
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],

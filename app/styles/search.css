@@ -1,4 +1,31 @@
-  body {
+.search:hover{
+ color:#61cc23
+}
+
+.cursor-pointer { cursor: pointer; }
+.hover-shadow:hover { 
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+  transform: translateY(-2px);
+  transition: all 0.2s ease;
+}
+
+
+    body {
+      font-family: 'Orbitron', sans-serif;
+      background: #020617;
+      color: #fff;
+    }
+
+    .cardbg{
+        background: #22c55e
+    }
+
+    .bg-card{
+     background-color:#0f172a ; 
+    }
+
+
+      body {
       background-color: #020617;
       color: #fff;
     }

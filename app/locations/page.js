@@ -25,7 +25,7 @@ export default  function  Locations() {
   return (
     <div className="container my-5">
 
-      <h1 className="text-center text-success mb-5 title">
+      <h1 className="text-center mb-5 title1">
         our Space navigations
       </h1>
 
@@ -37,7 +37,7 @@ export default  function  Locations() {
             <div className="card location-card p-4 text-center h-100"
              onClick={() => router.push(`/locations/${loc.id}`)}>
               
-              <h5 className="mb-3 title">{loc.name}</h5>
+              <h5 className="mb-3 title1">{loc.name}</h5>
 
               <span className="badge butbg mb-2">
                 {loc.type}

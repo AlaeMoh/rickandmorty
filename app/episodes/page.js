@@ -24,7 +24,7 @@ export default function Episodes() {
   }, []); 
   return (
        <div className="container my-5">
-          <h1 className="text-center mb-4 title text-success">Rick and Morty Episodes</h1>
+          <h1 className="text-center mb-4 title1 ">Rick and Morty Episodes</h1>
           
           {/* Carousel section */}
           <section>

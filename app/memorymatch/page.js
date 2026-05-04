@@ -2,6 +2,8 @@
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react'
 import "../styles/games.css"
+import Image1 from '../../public/assets/memoy.jpg'
+
 export default function Page() {
 
 const [cards, setCards] = useState([]);

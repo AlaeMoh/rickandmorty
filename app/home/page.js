@@ -7,6 +7,7 @@ import Image from 'next/image'
 import Game1 from "../deadoralive/page"
 import Game2 from "../residentgame/page"
 import Game3 from "../memorymatch/page"
+import { searchCharacter } from '../service/api'
 
 export default function Home() {
 
@@ -90,7 +91,7 @@ export default function Home() {
   <div className="row g-4">
 
 <div className="col-12 col-md-4">
-  <div className="card p-3 text-center d-flex justify-content-center align-items-center">
+  <div className="card p-3 text-center d-flex justify-content-center align-items-center video" >
     
     <div className="ratio ratio-16x9 w-100">
       <iframe
@@ -176,43 +177,42 @@ export default function Home() {
 </section>
 
 {/* <!-- Section 5--> */}
-<section className="container py-5">
+{/* <section className="container py-5">
   <h2 className="section-title title">Time to Play</h2>
 
   <div className="row g-4">
 
     <div className="col-md-6">
     <div className="card p-3 text-center game1">
-      
-      <Game1></Game1>
+    
       </div>
     </div>
 
     <div className="col-md-6">
       <div className="card p-3 text-center game3">
-          <Game3></Game3>
+       
       </div>
     </div>
 
   </div>
-</section>
+</section> */}
 
 
 {/* <!-- Section 6--> */}
-<section className="container py-5">
+{/* <section className="container py-5">
 
   <div className="row g-4">
 
     <div className="col-md-12">
     <div className="card p-3 text-center game2">
       
-      <Game2></Game2>
+
       </div>
     </div>
 
 
   </div>
-</section>
+</section> */}
     </div>
 
 

@@ -53,6 +53,12 @@ a {
   font-family: var(--font-mountains);
   font-weight: 700;
 }
+.title1 {
+  font-family: var(--font-mountains);
+  font-weight: 700;
+  color: rgb(57, 211, 57);
+}
+
 
 .description {
   font-family: var(--font-prata);
@@ -65,3 +71,5 @@ a {
 .footerbg{
   background:#000000
 }
+
+

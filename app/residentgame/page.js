@@ -120,7 +120,7 @@ const setUpRound = async () => {
 
 
   return (
-    <div className="container mt-5 text-center text-white">
+    <div className="container mt-5 text-center text-white title flex-grow-1">
       {gameOver ? (
         <div className="p-5 bg-dark rounded shadow">
           <h1 className="text-danger mb-3 title">💀 Game Over</h1>

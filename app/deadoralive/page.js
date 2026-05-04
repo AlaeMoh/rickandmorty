@@ -321,8 +321,8 @@ export default function Page() {
                         <span className="text-light">🎭 No Image</span>
                       </div>
                     )}
-              <div className="card-body text-dark">
-                <h5 className="card-title">{character.name}</h5>
+              <div className="card-body text-white title">
+                <h5 className="card-title title1">{character.name}</h5>
                 <div className="d-flex justify-content-between mt-3">
                   <button
                     className="btn btn-success w-45"

@@ -27,7 +27,7 @@ export default function Characters() {
   },[])
   return (
    <div className="container my-5">
-      <h1 className="text-center mb-4 title text-success">Rick and Morty Characters</h1>
+      <h1 className="text-center mb-4 title1 ">Rick and Morty Characters</h1>
       
       <div className="row g-4">
         {Characters?.map((character) => (

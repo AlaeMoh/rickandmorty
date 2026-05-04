@@ -34,7 +34,7 @@ export default function EpisodeDetail() {
     fetchData()
   }, [id])
 
-  if (!episode) {
+  if (!episode || !characters.image) {
     return (
       <div className="text-center mt-5">
         <div className="spinner-border text-success mb-3" />
@@ -48,7 +48,7 @@ export default function EpisodeDetail() {
 
       {/* 🔥 Episode Header */}
       <div className="card p-4 shadow-lg text-center mb-5 bg-dark text-white border-0 rounded-4">
-        <h1 className="text-success fw-bold title">{episode.name}</h1>
+        <h1 className="fw-bold title1">{episode.name}</h1>
 
         <div className="d-flex justify-content-center gap-3 mt-3 flex-wrap">
           <span className="badge bg-primary px-3 py-2">
@@ -66,7 +66,7 @@ export default function EpisodeDetail() {
       </div>
 
       {/* 🔥 Characters */}
-      <h3 className="text-center text-success mb-4 fw-semibold title">
+      <h3 className="text-center mb-4 fw-semibold title1">
         Characters in this Episode
       </h3>
 

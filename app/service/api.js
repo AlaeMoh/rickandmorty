@@ -95,8 +95,19 @@ try{
 
 //////////////
 
-export const searchCharacter= async()=>{
-    
-}
+export const searchCharacter = async (query, page = 1) => {
+  if (!query?.trim()) return { results: [], info: {} };
+  
+  const url = `https://rickandmortyapi.com/api/character/?name=${encodeURIComponent(query.trim())}&page=${page}`;
+  
+  try {
+    const res = await fetch(url, { next: { revalidate: 60 } }); 
+    if (!res.ok) throw new Error(`API error: ${res.status}`);
+    return await res.json();
+  } catch (err) {
+    console.error("API fetch failed:", err);
+    return { results: [], error: err.message };
+  }
+};
 
 

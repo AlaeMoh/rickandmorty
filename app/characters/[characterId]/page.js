@@ -30,11 +30,11 @@ const {characterId} = useParams()
     
   },[characterId])
 
-    if (!character) return <p className="text-center mt-5">Loading...</p>;
+    if (!character || !character.image ) return <p className="text-center mt-5">Loading...</p>;
 
   return (
    <div className="container my-5">
-      <h1 className="text-center mb-4 title">Rick and Morty Characters</h1>
+      <h1 className="text-center mb-4 title1">Rick and Morty Characters</h1>
       
     <div className="container my-5">
 
@@ -46,7 +46,7 @@ const {characterId} = useParams()
           <div className="col-md-4 text-center position-relative">
 
             {/* Ribbon */}
-            <span className={`ribbon ${
+            <span className={`oneCharacterRibon ${
               character.status === 'Alive'
                 ? 'bg-success'
                 : character.status === 'Dead'
@@ -68,7 +68,7 @@ const {characterId} = useParams()
           {/* Info */}
           <div className="col-md-8">
 
-            <h2 className="text-success mb-3 title fs-1">{character.name}</h2>
+            <h2 className=" mb-3 title1 fs-1 pt-4 md-text-center">{character.name}</h2>
 
             <div className="mb-3">
               <span className="badge yellowish me-2">

@@ -92,7 +92,7 @@
 
     .game1{
       background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../../public//assets/shop1.jpg') center/cover no-repeat;
-      height: 800px;
+      height: 300px;
     }
 
        .game2{
@@ -104,3 +104,4 @@
           background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../../public//assets/memoy.jpg') center/cover no-repeat;
       height: 800px;
     }
+

@@ -9,7 +9,7 @@
     }
 
     .bg-card{
-     background-color:#0f172a ; 
+     background-color:#0f172a !important; 
     }
 
     .location-card:hover {

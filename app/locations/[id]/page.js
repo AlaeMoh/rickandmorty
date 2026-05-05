@@ -1,14 +1,14 @@
 "use client"
 import React, { useState, useEffect } from 'react'
 import "../../styles/location.css"
-import { useParams } from 'next/navigation'
+import { useParams, useRouter } from 'next/navigation'
 import { fetchOneLocation } from '@/app/service/api'
 
 export default function Locations() {
   const { id } = useParams()
   const [location, setLocation] = useState(null)
    const [characters, setCharacters] = useState([])
-
+  const router= useRouter()
 
   useEffect(() => {
     const fetchData = async () => {
@@ -33,7 +33,7 @@ export default function Locations() {
 
   if (!location) {
     return (
-      <div className="text-center mt-5">
+      <div className="text-center mt-5 flex-grow-1">
         <div className="spinner-border text-success mb-3" />
         <p className="text-muted">Loading location...</p>
       </div>
@@ -41,7 +41,7 @@ export default function Locations() {
   }
 
   return (
-  <div className="container my-5">
+  <div className="container my-5 flex-grow-1">
 
       {/* Header */}
       <div className="card p-4 shadow-lg text-center mb-5 bg-dark text-white border-0 rounded-4">

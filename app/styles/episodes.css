@@ -56,3 +56,7 @@
   font-size: 12px;
   opacity: 0.8;
 }
+
+.btn-hover:hover{
+border: rgb(222, 222, 3), solid, 2px;
+}

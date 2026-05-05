@@ -2,6 +2,9 @@
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react'
 import "../styles/games.css"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { useRouter } from 'next/navigation';
+import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 export default function Page() {
      
   const [score, setScore]= useState(0)
@@ -12,7 +15,8 @@ export default function Page() {
   const [locked, setLocked] = useState(false);
   const [lives, setLives] = useState(3);
   const [gameOver, setGameOver] = useState(false);
-
+const router = useRouter
+()
 const setUpRound = async () => {
   try {
     const locId = Math.floor(Math.random() * 126) + 1;
@@ -127,10 +131,16 @@ const setUpRound = async () => {
           <h3 className="mb-3">Final Score: {score}</h3>
 
           <button
-            className="btn btn-warning px-4 py-2 fw-bold"
+            className="btn btn-warning px-4 py-2 fw-bold me-3"
             onClick={restartGame}
           >
             🔄 Play Again
+          </button>
+            <button
+            className="btn btn-warning px-5 py-2 fw-bold "
+            onClick={()=>{router.push("/allgames")}}
+          >
+            <FontAwesomeIcon icon={faAngleLeft} /> Go back
           </button>
         </div>
       ) : (

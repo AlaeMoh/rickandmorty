@@ -93,7 +93,7 @@ const {characterId} = useParams()
 
             {/* Button to Episodes page */}
             <button
-              className="btn yellowish mt-3"
+              className="btn yellowish mt-3 title"
               onClick={() => router.push(`/episodes`)}
             >
               View Episodes

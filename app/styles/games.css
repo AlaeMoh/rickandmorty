@@ -103,3 +103,7 @@ button {
           background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../../public//assets/memoy.jpg') center/cover no-repeat;
       height: 800px;
     }
+
+/* .card.border-success {
+  transform: scale(1.05);
+} */

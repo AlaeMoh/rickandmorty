@@ -34,13 +34,15 @@ export default function EpisodeDetail() {
     fetchData()
   }, [id])
 
-  if (!episode || !characters.image) {
+  if (!episode ) {
     return (
-      <div className="text-center mt-5">
-        <div className="spinner-border text-success mb-3" />
-        <p className="text-muted">Loading episode...</p>
-      </div>
-    )
+      <div className="text-center mt-5 flex-grow-1">
+        <div className="alert alert-info">
+          No episodes found. Try a different episode.
+        </div>
+        <button className="btn btn-warning mt-5" onClick={()=>{router.push("/episodes")}}>Go back</button>
+        </div>
+    ) 
   }
 
   return (

@@ -34,11 +34,11 @@ export default function Episodes() {
             {/* Episodes section */}
           <section>
      <div className="container py-5">
-      <h1 className="title text-center mb-5">Multiverse Episode Logs</h1>
+      <h1 className="title text-center mb-5 title1">Multiverse Episode Logs</h1>
       
-      <div className="row gap-5 ">
+      <div className="row gap-5 justify-content-center">
         {episodes.map((episode) => (
-      <div key={episode.id} episode={episode} className="card h-100 shadow-sm border-0 bg-card text-white episodecard">
+      <div key={episode.id} episode={episode} className="card h-100 shadow-sm border-0 bg-card text-white episodecard col-12 col-md-6 col-lg-3">
         {/* Episode Season/Number Badge */}
 
         <div className="card-header cardbg text-white d-flex justify-content-between align-items-center ">
@@ -63,7 +63,7 @@ export default function Episodes() {
         </div>
 
         <div className="card-footer border-top-0 pb-3">
-          <button className="btn bg-warning w-100 rounded-pill  title"  onClick={()=>{router.push(`/episodes/${episode.id}`)}}>
+          <button className="btn text-warning w-100 rounded-pill title fs-5 btn-hover"  onClick={()=>{router.push(`/episodes/${episode.id}`)}}>
             View Details
           </button>
         </div>

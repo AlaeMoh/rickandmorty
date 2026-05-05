@@ -110,4 +110,36 @@ export const searchCharacter = async (query, page = 1) => {
   }
 };
 
+///////
+
+
+// service/api.js
+
+export const fetchAllCharacters = async (maxPages = 5) => {
+  try {
+    let all = []
+    let page = 1
+
+    while (page <= maxPages) {
+      const res = await fetch(`https://rickandmortyapi.com/api/character?page=${page}`)
+
+      if (!res.ok) {
+        throw new Error(`Failed on page ${page}`)
+      }
+
+      const data = await res.json()
+
+      all = [...all, ...data.results]
+      page++
+    }
+
+    // remove "unknown" once here
+    return all.filter(c => c.status !== "unknown")
+
+  } catch (error) {
+    console.error("API Error:", error)
+    return []
+  }
+}
+
 

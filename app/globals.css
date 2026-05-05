@@ -50,13 +50,13 @@ a {
 
 
 .title {
-  font-family: var(--font-mountains);
+  font-family: var(--font-mountains)!important;
   font-weight: 700;
 }
 .title1 {
   font-family: var(--font-mountains);
   font-weight: 700;
-  color: rgb(57, 211, 57);
+  color: rgb(57, 211, 57) !important;
 }
 
 

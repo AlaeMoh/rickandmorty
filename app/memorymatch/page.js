@@ -2,6 +2,9 @@
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react'
 import "../styles/games.css"
+import confetti from "canvas-confetti";
+import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function Page() {
 
@@ -29,6 +32,12 @@ const [cards, setCards] = useState([]);
 
   useEffect(() => { initGame(); }, []);
 
+    useEffect(() => {
+    if (matchedIds.length === 8) {
+      triggerFireworks();
+    }
+  }, [matchedIds]);
+
   const handleFlip = (card) => {
     if (locked || flippedCards.some(f => f.instanceId === card.instanceId) || matchedIds.includes(card.id)) return;
 
@@ -52,6 +61,26 @@ const [cards, setCards] = useState([]);
     }
   };
 
+  const triggerFireworks = () => {
+  const duration = 2 * 1000;
+  const end = Date.now() + duration;
+
+  const run = () => {
+    confetti({
+      particleCount: 5,
+      spread: 70,
+      origin: { y: 0.6 },
+    });
+
+    if (Date.now() < end) {
+      requestAnimationFrame(run);
+    }
+  };
+
+  run();
+};
+
+
   return (
     <div className="container mt-5 text-center text-warning pb-5 ">
       <h1 className='title'>Memory Match</h1>
@@ -64,8 +93,16 @@ const [cards, setCards] = useState([]);
           return (
             <div key={card.instanceId} className="col-3">
               <div 
-                className={`card bg-dark border-secondary shadow-sm ${isFlipped ? '' : 'bg-primary'}`}
-                style={{ cursor: 'pointer', height: '120px', transition: 'transform 0.3s' }}
+                className={`card shadow-sm ${
+                  isFlipped ? 'bg-dark border-secondary' : 'bg-dark'
+                } ${
+                  matchedIds.includes(card.id) ? 'border-success border-3' : ''
+                }`}
+                style={{ 
+                  cursor: 'pointer', 
+                  height: '120px', 
+                  transition: 'transform 0.3s' 
+                }}
                 onClick={() => handleFlip(card)}
               >
                 {isFlipped ? (
@@ -90,7 +127,16 @@ const [cards, setCards] = useState([]);
       {matchedIds.length === 8 && (
         <div className="mt-4">
           <h2 className="text-success title">Wubba Lubba Dub Dub! You Won!</h2>
-          <button className="btn btn-warning mt-2" onClick={initGame}>Play Again</button>
+          <button className="btn btn-warning px-4 py-2 fw-bold me-3 mt-2" onClick={initGame}>
+              🔄 Play Again
+          </button>
+            <button
+            className="btn btn-warning px-5 py-2 fw-bold mt-2"
+            onClick={()=>{router.push("/allgames")}}
+          >
+            <FontAwesomeIcon icon={faAngleLeft} /> Go back
+          </button>
+
         </div>
       )}
     </div>
